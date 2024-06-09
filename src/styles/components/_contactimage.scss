@@ -1,0 +1,12 @@
+.image-container {
+  position: relative;
+  display: flex;
+  margin-right: 5px;
+}
+.image {
+  max-width: 250px;
+  height: 895px;
+  &:hover {
+    opacity: 0.8;
+  }
+}

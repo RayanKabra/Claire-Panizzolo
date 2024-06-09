@@ -1,0 +1,48 @@
+.main-container {
+  padding-top: 250px;
+  margin-bottom: 50px;
+
+  /* h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  } */
+  .grid-container {
+    max-width: 1224px;
+    width: 90%;
+    margin: auto;
+
+
+    .photo-gallery {
+      display: flex;
+      gap: 20px;
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .photo img {
+          width: 100%;
+          height: auto;
+          border-radius: 5px;
+          object-fit: cover;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+
+  // Media queries
+  @media (max-width: 768px){
+    .photo-gallery {
+      flex-direction: column;
+    }
+  }
+}

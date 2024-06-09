@@ -1,0 +1,30 @@
+.mentions-container {
+    width: 100%;
+    padding-top: 250px;
+    margin-bottom: 80px;
+
+  .mentions-main-title {
+    .mentions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 50px;
+      margin-bottom: 80px;
+    }
+  }
+  .mentions-content-container {
+    margin: 0 230px;
+    .mentions-content {
+      margin-bottom: 40px;
+      p{
+        font-size: 18px;
+        margin: 20px 0px;
+        line-height: 1.5;
+      }
+      span {
+        font-family: $font-2;
+        font-weight: 200;
+      }
+    }
+  }
+}
