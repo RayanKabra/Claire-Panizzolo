@@ -25,13 +25,13 @@ const FullScreenMenu = ({ onClose }) => {
               À la rencontre des passionné.e.s
             </NavLink>
           </li>
-          <li>-------------------</li>
+          <li className="horizontal-line"></li>
           <li className="menu-titles">
             <NavLink to="/autour-du-globe" className="nav-link">
               Autour du globe
             </NavLink>
           </li>
-          <li>-------------------</li>
+          <li className="horizontal-line"></li>
           <li className="menu-titles">
             <NavLink to="/a-table" className="nav-link">
               À table !
