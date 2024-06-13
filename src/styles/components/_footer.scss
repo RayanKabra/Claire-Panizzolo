@@ -1,7 +1,7 @@
 .footer {
   background-color: rgb(238,129,38);
   color: black;
-  height: 70px;
+  height: 55px;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -21,13 +21,13 @@
       gap: 10px;
       width: 250px;
       h3 {
-        font-size: 16px;
+        font-size: 15px;
       }
       .social-contact-links {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 50%;
+        width: 30%;
 
         .links {
           font-size: 20px;
@@ -59,7 +59,7 @@
       font-size: 15px;
     }
     .legal-informations {
-      font-size: 16px;
+      font-size: 15px;
       &:hover {
         color: white;
       }

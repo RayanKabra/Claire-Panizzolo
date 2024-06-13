@@ -37,7 +37,7 @@
       .logo-nav {
         display: flex;
         justify-content: center;
-        flex: 0 1 600px;
+        flex: 0 1 450px;
       }
       .logo-nav img {
         max-width: 100%;
@@ -48,7 +48,8 @@
       .menu {
         margin-bottom: 40px;
         letter-spacing: 1px;
-        font-size: 23px;
+        font-size: 18px;
+        font-weight: bold;
         text-align: center;
 
         &:hover {
@@ -73,11 +74,11 @@ nav.small{
     font-size: 20px !important;
   }
   img {
-    width: 400px !important;
+    width: 350px !important;
     transition: width 0.8s ease;
   }
   .close-btn {
     margin-bottom: 30px;
   }
-  }
+}
 

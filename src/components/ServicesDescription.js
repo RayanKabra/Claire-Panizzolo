@@ -18,14 +18,15 @@ const ServicesDescription = ({ styles }) => {
         <h2>Reportages photos</h2>
       </div>
       <p>
-        raconter en image les évènements et coulisses de votre entreprise, vos
+        Raconter en image les évènements et coulisses de votre entreprise, vos
         savoir-faire et votre ADN de manière authentique.
       </p>
       <div className="photo-produits-title padding-title">
         <h2>Photographies de produits</h2>
       </div>
       <p>
-        valoriser vos produits avec une mise en scène ou en version packshot.
+        Valoriser vos produits avec une mise en scène ou en version packshot
+        dans divers secteurs.
       </p>
     </div>
   );

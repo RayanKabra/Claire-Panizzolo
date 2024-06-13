@@ -89,7 +89,7 @@ const PhotoMainContainer = () => {
     <div className="main-container">
       <div className="main-container-title">
         <h1>À table !</h1>
-        <p className="title-description">
+        <p className="title-description-food">
           Synonyme de partage et de surprises, elle y accueille les petits plats
           et les banquets.
         </p>
