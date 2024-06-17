@@ -16,10 +16,9 @@
 
     .social-contact {
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 10px;
-      width: 250px;
+      gap: 5px;
+
       h3 {
         font-size: 15px;
       }
@@ -27,7 +26,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 30%;
+        gap: 5px;
+        // width: 30%;
 
         .links {
           font-size: 20px;
@@ -43,10 +43,11 @@
     }
     .footer-middle-part {
       display: flex;
-      justify-content: center;
+      // justify-content: center;
       align-items: center;
       flex-direction: column;
       gap: 5px;
+      margin-right: 60px;
 
       p {
         font-size: 13px;

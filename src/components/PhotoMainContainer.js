@@ -1,26 +1,26 @@
 import React, { useState } from "react";
 
-import travel1 from "../assets/images/PhotoFirstPage/travel1.jpg";
-import travel2 from "../assets/images/PhotoFirstPage/travel2.jpg";
-import travel3 from "../assets/images/PhotoFirstPage/travel3.jpg";
-import travel4 from "../assets/images/PhotoFirstPage/travel4.jpg";
-import travel5 from "../assets/images/PhotoFirstPage/travel5.jpg";
-import travel6 from "../assets/images/PhotoFirstPage/travel6.jpg";
-import travel7 from "../assets/images/PhotoFirstPage/travel7.jpg";
-import travel8 from "../assets/images/PhotoFirstPage/travel8.jpg";
-import travel9 from "../assets/images/PhotoFirstPage/travel9.jpg";
-import travel10 from "../assets/images/PhotoFirstPage/travel10.jpg";
-import travel11 from "../assets/images/PhotoFirstPage/travel11.jpg";
-import travel12 from "../assets/images/PhotoFirstPage/travel13.jpg";
-import travel13 from "../assets/images/PhotoFirstPage/travel14.jpg";
-import travel14 from "../assets/images/PhotoFirstPage/travel15.jpg";
-import travel15 from "../assets/images/PhotoFirstPage/travel16.jpg";
-import travel16 from "../assets/images/PhotoFirstPage/travel17.jpg";
-import travel17 from "../assets/images/PhotoFirstPage/travel18.jpg";
-import travel18 from "../assets/images/PhotoFirstPage/travel19.jpg";
-import travel19 from "../assets/images/PhotoFirstPage/travel20.jpg";
-import travel20 from "../assets/images/PhotoFirstPage/travel21.jpg";
-import travel21 from "../assets/images/PhotoFirstPage/travel22.jpg";
+import travel1 from "../assets/images/PhotoFirstPage/travel1.webp";
+import travel2 from "../assets/images/PhotoFirstPage/travel4.jpeg";
+import travel3 from "../assets/images/PhotoFirstPage/travel7.jpeg";
+import travel4 from "../assets/images/PhotoFirstPage/travel10.jpeg";
+import travel5 from "../assets/images/PhotoFirstPage/travel13.jpeg";
+import travel6 from "../assets/images/PhotoFirstPage/travel16.jpeg";
+import travel7 from "../assets/images/PhotoFirstPage/travel19.jpeg";
+import travel8 from "../assets/images/PhotoFirstPage/travel3.jpeg";
+import travel9 from "../assets/images/PhotoFirstPage/travel6.jpeg";
+import travel10 from "../assets/images/PhotoFirstPage/travel9.jpeg";
+import travel11 from "../assets/images/PhotoFirstPage/travel12.jpeg";
+import travel12 from "../assets/images/PhotoFirstPage/travel15.jpeg";
+import travel13 from "../assets/images/PhotoFirstPage/travel18.jpeg";
+// import travel14 from "../assets/images/PhotoFirstPage/travel21.jpeg";
+import travel15 from "../assets/images/PhotoFirstPage/travel2.jpeg";
+import travel16 from "../assets/images/PhotoFirstPage/travel5.jpeg";
+import travel17 from "../assets/images/PhotoFirstPage/travel8.jpeg";
+import travel18 from "../assets/images/PhotoFirstPage/travel11.jpeg";
+import travel19 from "../assets/images/PhotoFirstPage/travel14.jpeg";
+import travel20 from "../assets/images/PhotoFirstPage/travel17.jpeg";
+import travel21 from "../assets/images/PhotoFirstPage/travel21.jpeg";
 
 const PhotoMainContainer = () => {
   const [imageToShow, setImageToShow] = useState("");
@@ -46,7 +46,6 @@ const PhotoMainContainer = () => {
     travel20,
     travel13,
     travel7,
-    travel14,
     travel21,
   ];
 
@@ -165,9 +164,9 @@ const PhotoMainContainer = () => {
             <div className="photo">
               <img src={travel13} alt="" onClick={() => showImage(travel13)} />
             </div>
-            <div className="photo">
+            {/* <div className="photo">
               <img src={travel14} alt="" onClick={() => showImage(travel14)} />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

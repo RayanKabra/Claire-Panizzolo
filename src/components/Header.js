@@ -1,13 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import background1 from "../assets/images/home.jpg";
-import background2 from "../assets/images/Home/home1.jpg";
-import background3 from "../assets/images/Home/home3.jpg";
-import background4 from "../assets/images/Home/home4.jpg";
+import background1 from "../assets/images/Home/home1.webp";
+import background2 from "../assets/images//Home/home.jpg";
+import background3 from "../assets/images/Home/home3.webp";
+import background4 from "../assets/images/Home/home4.webp";
+import background5 from "../assets/images/Home/home5.webp";
 
 const Header = () => {
   const [currentBackground, setCurrentBackground] = useState(0);
-  const backgrounds = [background1, background2, background3, background4];
+  const backgrounds = [
+    background1,
+    background2,
+    background3,
+    background4,
+    background5,
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {

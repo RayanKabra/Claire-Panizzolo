@@ -30,7 +30,7 @@ const Navbar = ({ scrollControlValue }) => {
     <div className={`navbar ${isSmall ? "small" : ""}`}>
       <nav className={`nav ${isSmall ? "small" : ""}`}>
         <ul>
-          <li className="menu" onClick={toggleMenu}>
+          <li className="menu menu-left" onClick={toggleMenu}>
             <NavLink to="" className="nav-link">
               {menuOpen ? null : "Photographie"}
             </NavLink>
@@ -42,7 +42,7 @@ const Navbar = ({ scrollControlValue }) => {
             </NavLink>
           </li>
 
-          <li className="menu">
+          <li className="menu menu-right">
             <NavLink to="/services" className="nav-link">
               {menuOpen ? null : "Services & Contact"}
             </NavLink>

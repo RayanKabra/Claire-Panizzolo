@@ -1,7 +1,7 @@
 .navbar {
   position: fixed;
   width: 100%;
-  height: 202.5px;
+  height: 150px;
   z-index: 4000;
   top: 0;
   display: flex;
@@ -15,16 +15,12 @@
     align-items: center;
     font-size: 1.3rem;
     transition: .3s ease;
-    margin-right: 20px;
-    // margin-left: 15px;
-    
-    
 
     ul {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 1400px;
+      width: 1200px;
 
       li {
         display: flex;
@@ -43,20 +39,26 @@
         max-width: 100%;
         height: auto;
         transition: width .8s ease;
-        margin-left: 8px;
       }
       .menu {
         margin-bottom: 40px;
         letter-spacing: 1px;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: bold;
         text-align: center;
 
         &:hover {
-          transform: scale(1.2);
+          transform: scale(1.1);
           transition: 0.3s ease;
-          font-weight: bold;
         }
+      }
+      .menu-left {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .menu-right {
+        display: flex;
+        justify-content: flex-end
       }
     }
   }
@@ -71,7 +73,7 @@
 nav.small{
   .menu {
     margin-top: 40px;
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
   img {
     width: 350px !important;
