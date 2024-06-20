@@ -1,27 +1,29 @@
 import React, { useState } from "react";
 
-import passion1 from "../assets/images/PhotoThirdPage/passion1.jpg";
-import passion2 from "../assets/images/PhotoThirdPage/passion2.jpg";
-import passion3 from "../assets/images/PhotoThirdPage/passion3.jpg";
-import passion4 from "../assets/images/PhotoThirdPage/passion4.jpg";
-import passion5 from "../assets/images/PhotoThirdPage/passion5.jpg";
-import passion6 from "../assets/images/PhotoThirdPage/passion6.jpg";
-import passion7 from "../assets/images/PhotoThirdPage/passion7.jpg";
-import passion8 from "../assets/images/PhotoThirdPage/passion8.jpg";
-import passion9 from "../assets/images/PhotoThirdPage/passion9.jpg";
-import passion10 from "../assets/images/PhotoThirdPage/passion10.jpg";
-import passion11 from "../assets/images/PhotoThirdPage/passion11.jpg";
-import passion12 from "../assets/images/PhotoThirdPage/passion12.jpg";
-import passion13 from "../assets/images/PhotoThirdPage/passion13.jpg";
-import passion14 from "../assets/images/PhotoThirdPage/passion14.jpg";
-import passion15 from "../assets/images/PhotoThirdPage/passion15.jpg";
-import passion16 from "../assets/images/PhotoThirdPage/passion16.jpg";
-import passion17 from "../assets/images/PhotoThirdPage/passion17.jpg";
-import passion18 from "../assets/images/PhotoThirdPage/passion18.jpg";
-import passion19 from "../assets/images/PhotoThirdPage/passion19.jpg";
-import passion20 from "../assets/images/PhotoThirdPage/passion20.jpg";
-import passion21 from "../assets/images/PhotoThirdPage/passion21.jpg";
-import passion22 from "../assets/images/PhotoThirdPage/passion22.jpg";
+import passion1 from "../assets/images/PhotoThirdPage/passion2.jpeg";
+import passion2 from "../assets/images/PhotoThirdPage/passion5.jpeg";
+import passion3 from "../assets/images/PhotoThirdPage/passion12.jpeg";
+import passion4 from "../assets/images/PhotoThirdPage/passion11.jpeg";
+import passion5 from "../assets/images/PhotoThirdPage/passion19.jpeg";
+import passion6 from "../assets/images/PhotoThirdPage/passion20.jpeg";
+import passion7 from "../assets/images/PhotoThirdPage/passion23.jpeg";
+import passion8 from "../assets/images/PhotoThirdPage/passion1.jpeg";
+import passion9 from "../assets/images/PhotoThirdPage/passion4.jpeg";
+import passion10 from "../assets/images/PhotoThirdPage/passion7.jpeg";
+import passion11 from "../assets/images/PhotoThirdPage/passion9.jpeg";
+import passion12 from "../assets/images/PhotoThirdPage/passion13.jpeg";
+import passion13 from "../assets/images/PhotoThirdPage/passion15.jpeg";
+import passion14 from "../assets/images/PhotoThirdPage/passion17.jpeg";
+import passion15 from "../assets/images/PhotoThirdPage/passion3.jpeg";
+import passion16 from "../assets/images/PhotoThirdPage/passion6.jpeg";
+import passion17 from "../assets/images/PhotoThirdPage/passion8.jpeg";
+import passion18 from "../assets/images/PhotoThirdPage/passion10.jpeg";
+import passion19 from "../assets/images/PhotoThirdPage/passion14.jpeg";
+import passion20 from "../assets/images/PhotoThirdPage/passion16.jpeg";
+import passion21 from "../assets/images/PhotoThirdPage/passion18.jpeg";
+import passion22 from "../assets/images/PhotoThirdPage/passion21.jpeg";
+import passion23 from "../assets/images/PhotoThirdPage/passion22.jpeg";
+import passion24 from "../assets/images/PhotoThirdPage/passion24.jpeg";
 
 const PhotoMainContainer3 = () => {
   const [imageToShow, setImageToShow] = useState("");
@@ -148,6 +150,13 @@ const PhotoMainContainer3 = () => {
                 onClick={() => showImage(passion22)}
               />
             </div>
+            <div className="photo">
+              <img
+                src={passion23}
+                alt=""
+                onClick={() => showImage(passion23)}
+              />
+            </div>
           </div>
 
           <div className="column">
@@ -170,7 +179,11 @@ const PhotoMainContainer3 = () => {
               <img src={passion6} alt="" onClick={() => showImage(passion6)} />
             </div>
             <div className="photo">
-              <img src={passion7} alt="" onClick={() => showImage(passion7)} />
+              <img
+                src={passion24}
+                alt=""
+                onClick={() => showImage(passion24)}
+              />
             </div>
           </div>
 
@@ -223,6 +236,9 @@ const PhotoMainContainer3 = () => {
                 alt=""
                 onClick={() => showImage(passion21)}
               />
+            </div>
+            <div className="photo">
+              <img src={passion7} alt="" onClick={() => showImage(passion7)} />
             </div>
           </div>
         </div>
