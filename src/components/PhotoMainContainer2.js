@@ -1,26 +1,26 @@
 import React, { useState } from "react";
 
-import food1 from "../assets/images/PhotoSecondPage/food1.jpg";
-import food2 from "../assets/images/PhotoSecondPage/food2.jpg";
-import food3 from "../assets/images/PhotoSecondPage/food3.jpg";
-import food4 from "../assets/images/PhotoSecondPage/food4.jpg";
-import food5 from "../assets/images/PhotoSecondPage/food5.jpg";
-import food6 from "../assets/images/PhotoSecondPage/food6.jpg";
-import food7 from "../assets/images/PhotoSecondPage/food7.jpg";
-import food8 from "../assets/images/PhotoSecondPage/food8.jpg";
-import food9 from "../assets/images/PhotoSecondPage/food9.jpg";
-import food10 from "../assets/images/PhotoSecondPage/food10.jpg";
-import food11 from "../assets/images/PhotoSecondPage/food11.jpg";
-import food12 from "../assets/images/PhotoSecondPage/food12.jpg";
-import food13 from "../assets/images/PhotoSecondPage/food13.jpg";
-import food14 from "../assets/images/PhotoSecondPage/food14.jpg";
-import food15 from "../assets/images/PhotoSecondPage/food15.jpg";
-import food16 from "../assets/images/PhotoSecondPage/food16.jpg";
-import food17 from "../assets/images/PhotoSecondPage/food17.jpg";
-import food18 from "../assets/images/PhotoSecondPage/food18.jpg";
-import food19 from "../assets/images/PhotoSecondPage/food19.jpg";
-import food20 from "../assets/images/PhotoSecondPage/food20.jpg";
-import food21 from "../assets/images/PhotoSecondPage/food21.jpg";
+import food1 from "../assets/images/PhotoSecondPage/food1.jpeg";
+import food2 from "../assets/images/PhotoSecondPage/food4.jpeg";
+import food3 from "../assets/images/PhotoSecondPage/food7.jpeg";
+import food4 from "../assets/images/PhotoSecondPage/food10.jpeg";
+import food5 from "../assets/images/PhotoSecondPage/food14.jpeg";
+import food6 from "../assets/images/PhotoSecondPage/food17.jpeg";
+import food7 from "../assets/images/PhotoSecondPage/food20.jpeg";
+import food8 from "../assets/images/PhotoSecondPage/food2.jpeg";
+import food9 from "../assets/images/PhotoSecondPage/food5.jpeg";
+import food10 from "../assets/images/PhotoSecondPage/food8.jpeg";
+import food11 from "../assets/images/PhotoSecondPage/food12.jpeg";
+import food12 from "../assets/images/PhotoSecondPage/food15.jpeg";
+import food13 from "../assets/images/PhotoSecondPage/food18.jpeg";
+import food14 from "../assets/images/PhotoSecondPage/food21.jpeg";
+import food15 from "../assets/images/PhotoSecondPage/food3.jpeg";
+import food16 from "../assets/images/PhotoSecondPage/food6.jpeg";
+import food17 from "../assets/images/PhotoSecondPage/food9.jpeg";
+import food18 from "../assets/images/PhotoSecondPage/food13.jpeg";
+import food19 from "../assets/images/PhotoSecondPage/food16.jpeg";
+import food20 from "../assets/images/PhotoSecondPage/food19.jpeg";
+import food21 from "../assets/images/PhotoSecondPage/food22.jpeg";
 
 const PhotoMainContainer = () => {
   const [imageToShow, setImageToShow] = useState("");

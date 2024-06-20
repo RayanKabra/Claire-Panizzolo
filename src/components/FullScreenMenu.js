@@ -37,6 +37,12 @@ const FullScreenMenu = ({ onClose }) => {
               À table !
             </NavLink>
           </li>
+          <li className="horizontal-line"></li>
+          <li className="menu-titles">
+            <NavLink to="/design" className="nav-link">
+              Architecture - Immobilier - Design
+            </NavLink>
+          </li>
         </ul>
       </div>
     </div>

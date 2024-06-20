@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ServicesPart from "../assets/images/ServicesAndContact/services-right-part.jpg";
+import ServicesPart from "../assets/images/ServicesAndContact/services-right-part.webp";
 import Cta from "./Cta";
 import Fade from "./Fade";
 

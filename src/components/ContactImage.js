@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ContactPart from "../assets/images/ServicesAndContact/contact-left-part.jpg";
+import ContactPart from "../assets/images/ServicesAndContact/contact-left-part.webp";
 import ServicesDescription from "./ServicesDescription";
 import Fade from "./Fade";
 
