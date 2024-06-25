@@ -1,5 +1,5 @@
 .main-container {
-  padding-top: 250px;
+  // padding-top: 250px;
   margin-bottom: 50px;
 
   .title-description-food {
@@ -46,10 +46,24 @@
     }
   }
 
-  // Media queries
-  @media (max-width: 768px){
+  // MOBILE VERSIONS (media queries)
+  @media screen and (max-width: 768px){
+    .main-container {
+      padding-top: 150px;
+    }
+    .main-container-title {
+      h1 {
+        font-size: 25px;
+      }
+    }
+    .title-description-food {
+      font-size: 15px;
+      line-height: 20px;
+      width: 80%;
+    }
     .photo-gallery {
       flex-direction: column;
     }
   }
 }
+

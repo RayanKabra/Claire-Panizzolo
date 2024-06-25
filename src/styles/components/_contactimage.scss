@@ -10,3 +10,10 @@
     opacity: 0.8;
   }
 }
+
+// MOBILE
+@media screen and (max-width: 768px) {
+  .image-container {
+    margin-right: 0;
+  }
+}

@@ -1,12 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ContactPart from "../assets/images/ServicesAndContact/contact-left-part.webp";
 import ServicesDescription from "./ServicesDescription";
+import { useLocation } from "react-router-dom";
 import Fade from "./Fade";
 
 function ContactImage() {
   const [hovered, setHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const location = useLocation();
 
-  return (
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [location]);
+
+  return isMobile ? (
+    <div className="image-container">
+      <ServicesDescription />
+    </div>
+  ) : (
     <div
       className="image-container"
       onMouseEnter={() => setHovered(true)}

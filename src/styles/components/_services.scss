@@ -7,34 +7,12 @@
   margin-bottom: 50px;
 }
 
-
-/* .services-container {
-  margin-top: 250px;
-  .services-container-title h1 {
+@media screen and (max-width: 768px) {
+  .services-contact-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
-  }
-  .before-cta-title {
-    opacity: 0;
-    transition: opacity .8s ease;
-    h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgba(238, 128, 38);
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    font-size: 35px;
-    padding-top: 250px;
-    }
-  }
+    flex-direction: column;
+    margin-bottom: 30px;
+  } 
 }
-
-.before-cta-title.hidden {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transition: opacity .8s ease;
-} */

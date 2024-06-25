@@ -1,81 +1,186 @@
+// .about-container {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-columns: 40% 60%;
+//   margin: 20px 40px 0px ;
+//   padding: 40px;
+//   height: 800px;
+
+//   .about-img {
+//     /* display: flex; */
+//     justify-content: center;
+//     align-items: center;
+//     position: relative;
+//   }
+//   .about-img img {
+//     position: absolute;
+//     width: 70%; 
+//     height: 650px;
+//     top: 10px;
+//     left: 100px;
+//     z-index: -100;
+//     // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+//     object-fit: cover;
+//   }
+//   .about-presentation {
+//     padding-right: 100px;
+
+//     .about-title {
+//       padding: 20px;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       color: rgb(238,129,38);
+//     }
+
+//     .Claire {
+//       color: rgb(238,129,38);
+//       margin: 0;
+
+//       span {
+//         color: black;
+//       }
+//     }
+
+//     p {
+//       text-align: justify;
+//       margin: 20px 0;
+//       letter-spacing: 1px;
+//       line-height: 1.5;
+//       font-size: 15px;
+//     }
+//     .social-contact {
+//       display: flex;
+//       align-items: center;
+//       text-align: center;
+
+//       .links {
+//         cursor: pointer;
+//         &:hover {
+//           transform: scale(1.1);
+//           transition: transform 0.3s ease;
+//         }
+
+//         a:hover {
+//           color: rgb(238,129,38);
+//           }
+        
+//       }
+//       .arobase {
+//         font-family: $font-2;
+//         font-weight: 200;
+//         display: inline-block;
+//       }
+
+//       .vertical-line {
+//         margin: 0 15px;
+//         font-size: large;
+//       }
+//     }
+//   }
+// }
 .about-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   grid-template-columns: 40% 60%;
-  margin: 20px 40px 0px ;
+  margin: 20px 40px 0px;
   padding: 40px;
   height: 800px;
+  gap: 20px;
+}
 
-  .about-img {
-    /* display: flex; */
+.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.about-presentation {
+  padding-right: 20px;
+}
+
+.about-title {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(238, 129, 38);
+}
+
+.Claire {
+  color: rgb(238, 129, 38);
+  margin: 0;
+}
+
+.Claire span {
+  color: black;
+}
+
+.about-presentation p {
+  text-align: justify;
+  margin: 20px 0;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.social-contact {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.links {
+  cursor: pointer;
+}
+
+.links:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.links a:hover {
+  color: rgb(238, 129, 38);
+}
+
+.arobase {
+  font-family: $font-2;
+  font-weight: 200;
+  display: inline-block;
+}
+
+.vertical-line {
+  margin: 0 15px;
+  font-size: large;
+}
+
+// Mobile 
+@media screen and (max-width: 768px) {
+  .about-container{
+    display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  .about-img img {
-    position: absolute;
-    width: 70%; 
-    height: 650px;
-    top: 10px;
-    left: 100px;
-    z-index: -100;
-    // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    object-fit: cover;
-  }
-  .about-presentation {
-    padding-right: 100px;
-
-    .about-title {
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: rgb(238,129,38);
-    }
-
-    .Claire {
-      color: rgb(238,129,38);
-      margin: 0;
-
-      span {
-        color: black;
-      }
-    }
-
+    flex-direction: column-reverse;
+    padding: 430px 0 0 0;
+    margin-bottom: 480px;
+    .about-presentation {
+    padding-right: 0;
     p {
-      text-align: justify;
-      margin: 20px 0;
-      letter-spacing: 1px;
-      line-height: 1.5;
-      font-size: 15px;
-    }
-    .social-contact {
-      display: flex;
-      align-items: center;
-      text-align: center;
-
+      font-size: 12px;
+      margin: 10px 0;
+      }
+      .Claire {
+        margin-top: 20px;
+      }
       .links {
-        cursor: pointer;
-        &:hover {
-          transform: scale(1.1);
-          transition: transform 0.3s ease;
-        }
-
-        a:hover {
-          color: rgb(238,129,38);
-          }
-        
-      }
-      .arobase {
-        font-family: $font-2;
-        font-weight: 200;
-        display: inline-block;
-      }
-
-      .vertical-line {
-        margin: 0 15px;
-        font-size: large;
+        margin: 0;
       }
     }
   }
+  
 }

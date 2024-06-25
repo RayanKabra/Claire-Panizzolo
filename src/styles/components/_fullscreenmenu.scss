@@ -64,8 +64,24 @@
       }
       li {
         margin-top: 40px;
-        font-size: 15px;
+      }
+      .nav-link-services {
+        color: orange;
+        font-weight:bold;
       }
     }
   }
+}
+
+// MOBILE 
+@media screen and (max-width: 768px) {
+  .full-screen-menu {
+      .photographie-menu-container {
+        .menu-choices {
+          a {
+            font-size: 22px;
+          }
+        }
+      }
+    }
 }

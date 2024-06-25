@@ -7,7 +7,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 700px;
+    max-width: 700px;
     margin: 0 auto;
     margin-bottom: 50px;
     text-align: center;
@@ -126,16 +126,30 @@
     }
     
   }
-
-  // Media queries
-  @media (max-width: 768px){
-    .photo-gallery {
-      flex-direction: column;
-    }
-  }
 }
-
 @keyframes lightboxIn {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+  // MOBILE VERSIONS (media queries)
+  @media (max-width: 768px){
+    .main-container {
+      padding-top: 150px;
+
+      .main-container-title {
+      h1 {
+        font-size: 25px;
+      }
+    }
+    .title-description {
+      font-size: 15px;
+      width: 90%;
+      line-height: 20px;
+    }
+    .photo-gallery {
+      flex-direction: column;
+    }
+    }
+    
+  }

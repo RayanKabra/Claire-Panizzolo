@@ -1,14 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ServicesPart from "../assets/images/ServicesAndContact/services-right-part.webp";
 import Cta from "./Cta";
 import Fade from "./Fade";
+import { useLocation } from "react-router-dom";
 
 function ServicesImage() {
   const [hovered, setHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const location = useLocation();
 
   const handleMouseEnter = () => {
     setHovered(true);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [location]);
 
   // const handleMouseLeave = () => {
   //   if (!persisted) {
@@ -16,7 +30,15 @@ function ServicesImage() {
   //   }
   // };
 
-  return (
+  return isMobile ? (
+    <div
+      className="image-container"
+      // onMouseEnter={handleMouseEnter}
+      // onMouseLeave={handleMouseLeave}
+    >
+      <Cta />
+    </div>
+  ) : (
     <div
       className="image-container"
       onMouseEnter={handleMouseEnter}

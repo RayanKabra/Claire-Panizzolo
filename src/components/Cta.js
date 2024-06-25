@@ -176,7 +176,10 @@ const Cta = ({ styles }) => {
 
   return (
     <div className="CTA-container" style={styles}>
-      <h2>Un renseignement, un devis ?</h2>
+      <div className="CTA-title">
+        <h2>Un renseignement, </h2>
+        <h2>un devis ?</h2>
+      </div>
       <div className="CTA-bg">
         {/* <div className="CTA-horizontal-line">
           <FontAwesomeIcon icon={faMinus} />

@@ -7,8 +7,10 @@ import { useState, useEffect } from "react";
 const Navbar = ({ scrollControlValue }) => {
   const [menuOpen, setMenuOpen] = useState(false); // État pour gérer l'ouverture du menu
   const [isSmall, setIsSmall] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const location = useLocation();
 
+  // To handle the menu opening
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
@@ -22,11 +24,33 @@ const Navbar = ({ scrollControlValue }) => {
       }
     };
 
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, [location, scrollControlValue]);
 
-  return (
+  return isMobile ? (
+    <>
+      <div className="navbar-mobile">
+        <div className="navbar-mobile-container">
+          <div className="hamburger" onClick={toggleMenu}>
+            {menuOpen ? null : <span>&#9776;</span>}
+          </div>
+          <NavLink to="*" className="nav-link">
+            <img src={logo} alt="Claire Panizzolo Logo" />
+          </NavLink>
+        </div>
+        {menuOpen && <FullScreenMenu onClose={toggleMenu} />}
+      </div>
+    </>
+  ) : (
     <div className={`navbar ${isSmall ? "small" : ""}`}>
       <nav className={`nav ${isSmall ? "small" : ""}`}>
         <ul>
@@ -50,7 +74,7 @@ const Navbar = ({ scrollControlValue }) => {
         </ul>
       </nav>
       {menuOpen && <FullScreenMenu onClose={toggleMenu} />}
-      {/* Affiche le menu si menuOpen est vrai*/}
+      {/* Open the menu if menuOpen is equal to true*/}
     </div>
   );
 };

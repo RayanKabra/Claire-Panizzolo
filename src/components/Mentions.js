@@ -19,7 +19,12 @@ const Mentions = () => {
           <p>Propriétaire : Claire Panizzolo</p>
           <p>Créateur : Rayan Kabra - Développeur Web Fullstack</p>
           <p>Responsable publication : Claire Panizzolo</p>
-          <p>Hébergeur :</p>
+          <p>
+            Hébergeur : OVHcloud - OVH SAS est une filiale de la société OVH
+            Groupe SA, société immatriculée au RCS de Lille sous le numéro{" "}
+            <span>537 407 926</span> sise <span>2</span>, rue Kellermann,{" "}
+            <span>59100</span> Roubaix.
+          </p>
         </div>
         <div className="mentions-content">
           <h2>
