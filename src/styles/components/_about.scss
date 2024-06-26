@@ -90,6 +90,20 @@
 }
 
 // Mobile 
+@media screen and (max-width: 1150px) {
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    .about-presentation {
+      p {
+        font-size: 13px;
+        margin: 10px 0;
+        }
+      }
+  }
+}
 @media screen and (max-width: 768px) {
   .about-container{
     display: flex;
