@@ -69,6 +69,7 @@
   }
 }
 
+// MOBILE
 @media screen and (max-width: 768px) {
   .footer {
     .footer-container {
@@ -103,6 +104,33 @@
 
       .legal-informations {
         font-size: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer {
+    .footer-container {
+      width: calc(100% - 20px);
+      .social-contact {
+        .social-contact-links {
+        .links {
+        font-size: 10px;
+        gap: 5px;
+        }
+      }
+      }
+      .footer-middle-part {
+        p {
+          font-size: 9px;
+        }
+        .copyright {
+          font-size: 9px;
+        }
+      }
+      .legal-informations {
+        font-size: 9px;
       }
     }
   }

@@ -32,7 +32,11 @@
 // MOBILE
 @media screen and (max-width: 768px) {
   .services-description-container {
-    margin: 130px 40px 30px 40px;
+    margin: 130px 40px 20px 40px;
+    p {
+      font-size: 13px;
+      line-height: 1.5;
+    }
 
     .services-description-title {
       padding-bottom: 20px;
@@ -44,6 +48,7 @@
     .services-description-presentation {
       p {
         padding: 0;
+        font-size: 13px;
       }
     }
     .padding-title {
