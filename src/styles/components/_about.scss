@@ -114,6 +114,7 @@
     // margin-bottom: 480px;
     .about-img img {
       height: 100vh;
+      padding-bottom: 20px;
     }
     .about-presentation {
     padding: 0 0 20px 0;
@@ -130,4 +131,12 @@
     }
   }
   
+}
+
+@media screen and (max-width: 550px) {
+  .about-container {
+    .about-img img {
+    padding-bottom: 0;
+    }
+  }
 }
