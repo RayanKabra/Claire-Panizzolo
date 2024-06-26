@@ -1,108 +1,33 @@
-// .about-container {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-template-columns: 40% 60%;
-//   margin: 20px 40px 0px ;
-//   padding: 40px;
-//   height: 800px;
 
-//   .about-img {
-//     /* display: flex; */
-//     justify-content: center;
-//     align-items: center;
-//     position: relative;
-//   }
-//   .about-img img {
-//     position: absolute;
-//     width: 70%; 
-//     height: 650px;
-//     top: 10px;
-//     left: 100px;
-//     z-index: -100;
-//     // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-//     object-fit: cover;
-//   }
-//   .about-presentation {
-//     padding-right: 100px;
-
-//     .about-title {
-//       padding: 20px;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       color: rgb(238,129,38);
-//     }
-
-//     .Claire {
-//       color: rgb(238,129,38);
-//       margin: 0;
-
-//       span {
-//         color: black;
-//       }
-//     }
-
-//     p {
-//       text-align: justify;
-//       margin: 20px 0;
-//       letter-spacing: 1px;
-//       line-height: 1.5;
-//       font-size: 15px;
-//     }
-//     .social-contact {
-//       display: flex;
-//       align-items: center;
-//       text-align: center;
-
-//       .links {
-//         cursor: pointer;
-//         &:hover {
-//           transform: scale(1.1);
-//           transition: transform 0.3s ease;
-//         }
-
-//         a:hover {
-//           color: rgb(238,129,38);
-//           }
-        
-//       }
-//       .arobase {
-//         font-family: $font-2;
-//         font-weight: 200;
-//         display: inline-block;
-//       }
-
-//       .vertical-line {
-//         margin: 0 15px;
-//         font-size: large;
-//       }
-//     }
-//   }
-// }
 .about-container {
   display: grid;
-  grid-template-columns: 40% 60%;
-  margin: 20px 40px 0px;
-  padding: 40px;
-  height: 800px;
+  grid-template-columns: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 150px;
+  // padding: 0 110px;
+  // height: 800px;
   gap: 20px;
+  max-width: 1400px;
 }
 
 .about-img {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: auto;
 }
 
 .about-img img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
   max-height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .about-presentation {
-  padding-right: 20px;
+  padding-left: 40px;
 }
 
 .about-title {
@@ -111,6 +36,10 @@
   justify-content: center;
   align-items: center;
   color: rgb(238, 129, 38);
+
+  h2 {
+    font-size: 30px;
+  }
 }
 
 .Claire {
@@ -127,7 +56,7 @@
   margin: 20px 0;
   letter-spacing: 1px;
   line-height: 1.5;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .social-contact {
@@ -166,10 +95,11 @@
     display: flex;
     justify-content: center;
     flex-direction: column-reverse;
-    padding: 430px 0 0 0;
-    margin-bottom: 480px;
+    padding-bottom: 20px;
+    margin: 0 40px;
+    // margin-bottom: 480px;
     .about-presentation {
-    padding-right: 0;
+    padding: 0;
     p {
       font-size: 12px;
       margin: 10px 0;
