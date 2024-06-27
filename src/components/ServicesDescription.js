@@ -4,8 +4,7 @@ const ServicesDescription = ({ styles }) => {
   return (
     <div className="services-description-container" style={styles}>
       <div className="services-description-title">
-        <h2>Mes</h2>
-        <h2>Services</h2>
+        <h2>Mes Services</h2>
       </div>
       <div className="services-description-presentation">
         <p>

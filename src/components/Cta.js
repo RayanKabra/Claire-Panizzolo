@@ -177,7 +177,7 @@ const Cta = ({ styles }) => {
   return (
     <div className="CTA-container" style={styles}>
       <div className="CTA-title">
-        <h2>Un renseignement, </h2>
+        <h2>Un renseignement,</h2>
         <h2>un devis ?</h2>
       </div>
       <div className="CTA-bg">
