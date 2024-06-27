@@ -1,11 +1,13 @@
 .CTA-container {
+
   h2 {
       font-size: 35px;
-      padding-bottom: 50px;
       line-height: 40px;
       width: 325px;
       }
-
+  .CTA-title {
+    padding-bottom: 55px;
+  }
   .CTA-bg {
     display: flex;
     flex-direction: column;
