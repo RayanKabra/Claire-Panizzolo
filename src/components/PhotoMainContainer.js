@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import travel1 from "../assets/images/PhotoFirstPage/travel1.webp";
 import travel2 from "../assets/images/PhotoFirstPage/travel4.jpeg";
@@ -25,6 +26,19 @@ import travel21 from "../assets/images/PhotoFirstPage/travel21.jpeg";
 const PhotoMainContainer = () => {
   const [imageToShow, setImageToShow] = useState("");
   const [lightboxDisplay, setLightBoxDisplay] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [location]);
 
   const images = [
     travel1,
@@ -84,7 +98,106 @@ const PhotoMainContainer = () => {
     }
   };
 
-  return (
+  return isMobile ? (
+    <div className="main-container">
+      <div className="main-container-title">
+        <h1>Autour du globe</h1>
+        <p className="title-description">
+          Je documente le voyage, les découvertes et capture l’atmosphère de
+          lieux singuliers, ancrés dans la culture d’un pays, d’une région ou
+          d’une ville.
+        </p>
+      </div>
+
+      <div className="grid-container">
+        <div className="photo-gallery">
+          <div className="column">
+            <div className="photo">
+              <img src={travel1} alt="" onClick={() => showImage(travel1)} />
+            </div>
+            <div className="photo">
+              <img src={travel15} alt="" onClick={() => showImage(travel15)} />
+            </div>
+            <div className="photo">
+              <img src={travel8} alt="" onClick={() => showImage(travel8)} />
+            </div>
+            <div className="photo">
+              <img src={travel2} alt="" onClick={() => showImage(travel2)} />
+            </div>
+            <div className="photo">
+              <img src={travel16} alt="" onClick={() => showImage(travel16)} />
+            </div>
+            <div className="photo">
+              <img src={travel9} alt="" onClick={() => showImage(travel9)} />
+            </div>
+            <div className="photo">
+              <img src={travel3} alt="" onClick={() => showImage(travel3)} />
+            </div>
+          </div>
+
+          <div className="column">
+            <div className="photo">
+              <img src={travel17} alt="" onClick={() => showImage(travel17)} />
+            </div>
+            <div className="photo">
+              <img src={travel10} alt="" onClick={() => showImage(travel10)} />
+            </div>
+            <div className="photo">
+              <img src={travel4} alt="" onClick={() => showImage(travel4)} />
+            </div>
+            <div className="photo">
+              <img src={travel18} alt="" onClick={() => showImage(travel18)} />
+            </div>
+            <div className="photo">
+              <img src={travel11} alt="" onClick={() => showImage(travel11)} />
+            </div>
+            <div className="photo">
+              <img src={travel5} alt="" onClick={() => showImage(travel5)} />
+            </div>
+            <div className="photo">
+              <img src={travel19} alt="" onClick={() => showImage(travel19)} />
+            </div>
+          </div>
+
+          <div className="column">
+            <div className="photo">
+              <img src={travel12} alt="" onClick={() => showImage(travel12)} />
+            </div>
+            <div className="photo">
+              <img src={travel6} alt="" onClick={() => showImage(travel6)} />
+            </div>
+            <div className="photo">
+              <img src={travel20} alt="" onClick={() => showImage(travel20)} />
+            </div>
+            <div className="photo">
+              <img src={travel13} alt="" onClick={() => showImage(travel13)} />
+            </div>
+            <div className="photo">
+              <img src={travel7} alt="" onClick={() => showImage(travel7)} />
+            </div>
+            <div className="photo">
+              <img src={travel21} alt="" onClick={() => showImage(travel21)} />
+            </div>
+            {/* <div className="photo">
+              <img src={travel14} alt="" onClick={() => showImage(travel14)} />
+            </div> */}
+          </div>
+        </div>
+      </div>
+
+      {/* Affichez la lightbox si elle est ouverte */}
+      {lightboxDisplay && (
+        <div className="lightbox" onClick={hideLightBox}>
+          <button className="lightbox_close"></button>
+          <button className="lightbox_next" onClick={showNext}></button>
+          <button className="lightbox_prev" onClick={showPrev}></button>
+          <div className="lightbox_container">
+            <img className="photo" src={imageToShow} alt="Lightbox" />
+          </div>
+        </div>
+      )}
+    </div>
+  ) : (
     <div className="main-container">
       <div className="main-container-title">
         <h1>Autour du globe</h1>
