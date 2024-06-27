@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
+// Import images
 import architecture1 from "../assets/images/PhotoFourthPage/architecture1.webp";
 import architecture2 from "../assets/images/PhotoFourthPage/architecture2.webp";
 import architecture3 from "../assets/images/PhotoFourthPage/architecture3.webp";
@@ -19,24 +21,36 @@ import architecture15 from "../assets/images/PhotoFourthPage/architecture15.webp
 const PhotoMainContainer4 = () => {
   const [imageToShow, setImageToShow] = useState("");
   const [lightboxDisplay, setLightBoxDisplay] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [location]);
 
   const images = [
-    architecture6,
     architecture1,
-    architecture11,
     architecture2,
-    architecture7,
-    architecture12,
     architecture3,
-    architecture8,
-    architecture13,
     architecture4,
-    architecture9,
-    architecture14,
     architecture5,
-    architecture10,
-    architecture15,
     architecture6,
+    architecture7,
+    architecture8,
+    architecture9,
+    architecture10,
+    architecture11,
+    architecture12,
+    architecture13,
+    architecture14,
+    architecture15,
   ];
 
   // Fonction pour afficher une image spécifique dans la lightbox
@@ -74,7 +88,7 @@ const PhotoMainContainer4 = () => {
     }
   };
 
-  return (
+  return isMobile ? (
     <div className="main-container">
       <div className="main-container-title">
         <h1>Architecture - Immobilier - Design</h1>
@@ -90,35 +104,35 @@ const PhotoMainContainer4 = () => {
           <div className="column">
             <div className="photo">
               <img
-                src={architecture6}
+                src={architecture1}
                 alt=""
                 onClick={() => showImage(architecture6)}
               />
             </div>
             <div className="photo">
               <img
-                src={architecture7}
+                src={architecture2}
                 alt=""
                 onClick={() => showImage(architecture7)}
               />
             </div>
             <div className="photo">
               <img
-                src={architecture8}
+                src={architecture3}
                 alt=""
                 onClick={() => showImage(architecture8)}
               />
             </div>
             <div className="photo">
               <img
-                src={architecture9}
+                src={architecture4}
                 alt=""
                 onClick={() => showImage(architecture9)}
               />
             </div>
             <div className="photo">
               <img
-                src={architecture10}
+                src={architecture5}
                 alt=""
                 onClick={() => showImage(architecture10)}
               />
@@ -128,35 +142,35 @@ const PhotoMainContainer4 = () => {
           <div className="column">
             <div className="photo">
               <img
-                src={architecture1}
+                src={architecture6}
                 alt=""
                 onClick={() => showImage(architecture1)}
               />
             </div>
             <div className="photo">
               <img
-                src={architecture2}
+                src={architecture7}
                 alt=""
                 onClick={() => showImage(architecture2)}
               />
             </div>
             <div className="photo">
               <img
-                src={architecture3}
+                src={architecture8}
                 alt=""
                 onClick={() => showImage(architecture3)}
               />
             </div>
             <div className="photo">
               <img
-                src={architecture4}
+                src={architecture9}
                 alt=""
                 onClick={() => showImage(architecture4)}
               />
             </div>
             <div className="photo">
               <img
-                src={architecture5}
+                src={architecture10}
                 alt=""
                 onClick={() => showImage(architecture5)}
               />
@@ -190,6 +204,147 @@ const PhotoMainContainer4 = () => {
                 src={architecture14}
                 alt=""
                 onClick={() => showImage(architecture14)}
+              />
+            </div>
+            <div className="photo">
+              <img
+                src={architecture15}
+                alt=""
+                onClick={() => showImage(architecture15)}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Affichez la lightbox si elle est ouverte */}
+      {lightboxDisplay && (
+        <div className="lightbox" onClick={hideLightBox}>
+          <button className="lightbox_close"></button>
+          <button className="lightbox_next" onClick={showNext}></button>
+          <button className="lightbox_prev" onClick={showPrev}></button>
+          <div className="lightbox_container">
+            <img className="photo" src={imageToShow} alt="Lightbox" />
+          </div>
+        </div>
+      )}
+    </div>
+  ) : (
+    <div className="main-container">
+      <div className="main-container-title">
+        <h1>Architecture - Immobilier - Design</h1>
+        <p className="title-description">
+          Je capture les volumes, les lignes, les matières et j’attache une
+          grande importance à la lumière pour mettre en valeur différents
+          espaces à l’intérieur et à l’extérieur.
+        </p>
+      </div>
+
+      <div className="grid-container">
+        <div className="photo-gallery">
+          <div className="column">
+            <div className="photo">
+              <img
+                src={architecture1}
+                alt=""
+                onClick={() => showImage(architecture1)}
+              />
+            </div>
+            <div className="photo">
+              <img
+                src={architecture4}
+                alt=""
+                onClick={() => showImage(architecture4)}
+              />
+            </div>
+            <div className="photo">
+              <img
+                src={architecture7}
+                alt=""
+                onClick={() => showImage(architecture7)}
+              />
+            </div>
+            <div className="photo">
+              <img
+                src={architecture10}
+                alt=""
+                onClick={() => showImage(architecture10)}
+              />
+            </div>
+            <div className="photo">
+              <img
+                src={architecture13}
+                alt=""
+                onClick={() => showImage(architecture13)}
+              />
+            </div>
+          </div>
+
+          <div className="column">
+            <div className="photo">
+              <img
+                src={architecture2}
+                alt=""
+                onClick={() => showImage(architecture2)}
+              />
+            </div>
+            <div className="photo">
+              <img
+                src={architecture5}
+                alt=""
+                onClick={() => showImage(architecture5)}
+              />
+            </div>
+            <div className="photo">
+              <img
+                src={architecture8}
+                alt=""
+                onClick={() => showImage(architecture8)}
+              />
+            </div>
+            <div className="photo">
+              <img
+                src={architecture11}
+                alt=""
+                onClick={() => showImage(architecture11)}
+              />
+            </div>
+            <div className="photo">
+              <img
+                src={architecture14}
+                alt=""
+                onClick={() => showImage(architecture14)}
+              />
+            </div>
+          </div>
+
+          <div className="column">
+            <div className="photo">
+              <img
+                src={architecture3}
+                alt=""
+                onClick={() => showImage(architecture3)}
+              />
+            </div>
+            <div className="photo">
+              <img
+                src={architecture6}
+                alt=""
+                onClick={() => showImage(architecture6)}
+              />
+            </div>
+            <div className="photo">
+              <img
+                src={architecture9}
+                alt=""
+                onClick={() => showImage(architecture9)}
+              />
+            </div>
+            <div className="photo">
+              <img
+                src={architecture12}
+                alt=""
+                onClick={() => showImage(architecture12)}
               />
             </div>
             <div className="photo">
