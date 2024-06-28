@@ -78,13 +78,13 @@
   .full-screen-menu {
       .photographie-menu-container {
         .menu-choices {
-          .menu-titles li {
           li {
-            margin-top: 20px !important;
+            margin-top: 20px;
           }
-          }
-          a {
+          .menu-titles {
+            a {
             font-size: 20px;
+            }
           }
         }
       }

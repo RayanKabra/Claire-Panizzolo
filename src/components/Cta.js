@@ -1,12 +1,24 @@
 import React from "react";
-import { useRef } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faMinus } from "@fortawesome/free-solid-svg-icons";
+import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
-import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const Cta = ({ styles }) => {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [location]);
+
   const form = useRef();
 
   //Input fields validations
@@ -174,7 +186,107 @@ const Cta = ({ styles }) => {
     setEnteredMessage("");
   };
 
-  return (
+  return isMobile ? (
+    <div className="CTA-container" style={styles}>
+      <div className="CTA-title">
+        <h2>Un renseignement, un devis ?</h2>
+      </div>
+      <div className="CTA-bg">
+        {/* <div className="CTA-horizontal-line">
+          <FontAwesomeIcon icon={faMinus} />
+        </div> */}
+
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="input-box">
+            <div className="input-field field">
+              <input
+                type="text"
+                placeholder="Prénom"
+                id="firstname"
+                className="item"
+                autoComplete="off"
+                value={enteredFirstname}
+                name="user_firstname"
+                onChange={changeFirstnameHandler}
+                onBlur={firstnameInputBlurHandler}
+              />
+              {firstnameInputIsInvalid && (
+                <div className="error-text">Champ Obligatoire</div>
+              )}
+            </div>
+            <div className="input-field field">
+              <input
+                type="text"
+                placeholder="Nom"
+                id="lastname"
+                className="item"
+                autoComplete="off"
+                name="user_lastname"
+                value={enteredLastname}
+                onChange={changeLastnameHandler}
+                onBlur={lastnameInputBlurHandler}
+              />
+              {lastnameInputIsInvalid && (
+                <div className="error-text">Champ Obligatoire</div>
+              )}
+            </div>
+          </div>
+
+          <div className="input-box">
+            <div className="input-field field">
+              <input
+                type="email"
+                placeholder="Email"
+                id="email"
+                className="item"
+                autoComplete="off"
+                value={enteredEmail}
+                name="email"
+                onChange={changeEmailHandler}
+                onBlur={emailInputBlurHandler}
+              />
+              {emailInputIsInvalid && (
+                <div className="error-text">Champ Obligatoire</div>
+              )}
+            </div>
+            <div className="input-field field">
+              <input
+                type="text"
+                placeholder="Numéro de téléphone"
+                id="phone"
+                className="item"
+                autoComplete="off"
+                name="user_number"
+              />
+            </div>
+          </div>
+
+          <div className="textarea-field field">
+            <textarea
+              name="message"
+              value={enteredMessage}
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Votre message"
+              className="item"
+              autoComplete="off"
+              onChange={changeMessageHandler}
+              onBlur={messageInputBlurHandler}
+            ></textarea>
+            {messageInputIsInvalid && (
+              <div className="error-text">Champ Obligatoire</div>
+            )}
+          </div>
+
+          <button type="submit" value="Send">
+            Envoyer
+          </button>
+          <Toaster position="top-right" />
+        </form>
+      </div>
+    </div>
+  ) : (
     <div className="CTA-container" style={styles}>
       <div className="CTA-title">
         <h2>Un renseignement,</h2>

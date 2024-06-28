@@ -61,8 +61,19 @@
       line-height: 20px;
       width: 80%;
     }
-    .photo-gallery {
-      flex-direction: column;
+    .grid-container {
+      .photo-gallery {
+        flex-direction: column;
+        .column {
+          .photo img {
+          &:hover {
+            opacity: 1;
+            transition: none;
+            }
+          }
+        }
+        
+      }
     }
   }
 }
