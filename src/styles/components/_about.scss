@@ -138,10 +138,51 @@
   
 }
 
-@media screen and (max-width: 550px) {
+// @media screen and (max-width: 550px) {
+//   .about-container {
+//     .about-img img {
+//     padding-bottom: 0;
+//     width: 550px;
+//     }
+//   }
+// }
+@media screen and (width: 430px) {
   .about-container {
     .about-img img {
     padding-bottom: 0;
+    width: 430px;
+    object-fit: cover;
+    }
+  }
+}
+
+// Iphone SE
+@media screen and (max-width: 375px) {
+  .about-container {
+    .about-img img {
+    width: 375px;
+    padding-bottom: 0;
+    object-fit: cover;
+    }
+  }
+}
+// Iphone XR
+@media screen and (width: 414px) {
+  .about-container {
+    .about-img img {
+    width: 414px;
+    padding-bottom: 0;
+    object-fit: cover;
+    }
+  }
+}
+//Iphone 12 pro
+@media screen and (width: 390px) {
+  .about-container {
+    .about-img img {
+    width: 390px;
+    padding-bottom: 0;
+    object-fit: cover;
     }
   }
 }
