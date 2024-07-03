@@ -47,11 +47,6 @@ const Cta = ({ styles }) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(String(email).toLowerCase());
   };
-  // const validateEmail = (email) => {
-  //   const regex =
-  //     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  //   return regex.test(String(email).toLowerCase());
-  // };
 
   const [enteredMessage, setEnteredMessage] = useState("");
   const [enteredMessageIsValid, setEnteredMessageIsValid] = useState(false);
@@ -163,10 +158,10 @@ const Cta = ({ styles }) => {
 
     emailjs
       .sendForm(
-        "service_3kwb4mb", //enlever les tags de commentaires autour du 'w' pour réactiver le service de messagerie
-        "template_yuaxshc",
+        process.env.EMAIL_SERVICE_ID,
+        process.env.EMAIL_TEMPLATE_ID,
         form.current,
-        "numw3G7CBhja-dtXa"
+        process.env.EMAIL_PUBLIC_KEY
       )
       .then(
         (result) => {
