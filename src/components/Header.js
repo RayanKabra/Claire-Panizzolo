@@ -41,7 +41,7 @@ const Header = () => {
         transition: "background-image 1s ease-in-out",
       }}
     >
-      <Navbar scrollControlValue={800} />
+      <Navbar scrollControlValue={700} />
     </div>
   );
 };

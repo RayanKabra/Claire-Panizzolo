@@ -163,10 +163,10 @@ const Cta = ({ styles }) => {
 
     emailjs
       .sendForm(
-        "service_2mcl77w", //enlever les tags de commentaires autour du 'w' pour réactiver le service de messagerie
-        "template_1e0ahks",
+        "service_3kwb4mb", //enlever les tags de commentaires autour du 'w' pour réactiver le service de messagerie
+        "template_yuaxshc",
         form.current,
-        "6fMdef0jkbkZUIGHK"
+        "numw3G7CBhja-dtXa"
       )
       .then(
         (result) => {
