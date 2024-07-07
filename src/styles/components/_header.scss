@@ -2,8 +2,10 @@
   min-height: 100vh;
 }
 
-@supports ( -webkit-touch-callout : none) {
-  .header {
-  background-attachment:scroll;
+@media screen and (max-width: 400px) {
+  @supports ( -webkit-touch-callout : none) {
+    .header {
+    background-attachment:scroll;
+    }
   }
-  }
+}

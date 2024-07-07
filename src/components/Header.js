@@ -20,11 +20,15 @@ import backgroundMobile6 from "../assets/images/Home/homeMobile6.webp";
 const Header = () => {
   const [currentBackground, setCurrentBackground] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 400);
+  const [isScrollAttachment, setIsScrollAttachment] = useState(
+    window.innerWidth <= 500
+  );
   const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 400);
+      setIsScrollAttachment(window.innerWidth <= 500);
     };
 
     window.addEventListener("resize", handleResize);
@@ -86,8 +90,7 @@ const Header = () => {
         backgroundImage: `url(${currentImages[currentBackground]})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
-        // backgroundAttachment: "fixed",
-        // transition: "background-image 1s ease-in-out",
+        backgroundAttachment: isScrollAttachment ? "scroll" : "fixed",
       }}
     >
       <Navbar scrollControlValue={700} />
