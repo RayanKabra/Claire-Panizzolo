@@ -86,7 +86,7 @@ const Header = () => {
         backgroundImage: `url(${currentImages[currentBackground]})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
-        backgroundAttachment: "fixed",
+        // backgroundAttachment: "fixed",
         // transition: "background-image 1s ease-in-out",
       }}
     >
