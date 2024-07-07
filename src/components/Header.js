@@ -19,12 +19,12 @@ import backgroundMobile6 from "../assets/images/Home/homeMobile6.webp";
 
 const Header = () => {
   const [currentBackground, setCurrentBackground] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 400);
   const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 400);
     };
 
     window.addEventListener("resize", handleResize);
