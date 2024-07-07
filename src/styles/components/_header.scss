@@ -1,3 +1,10 @@
 .header {
   min-height: 100vh;
 }
+
+@media screen and (max-widht: 390px) {
+  .header {
+    height: auto;
+    width: 390px;
+  }
+};

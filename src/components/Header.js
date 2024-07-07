@@ -52,44 +52,42 @@ const Header = () => {
     []
   );
 
+  // Preload images
   useEffect(() => {
-    const imagesToPreload = isMobile ? backgroundsMobile : backgrounds;
-    imagesToPreload.forEach((image) => {
-      const img = new Image();
-      img.src = image;
-    });
+    const preloadImages = (images) => {
+      images.forEach((image) => {
+        const img = new Image();
+        img.src = image;
+      });
+    };
+
+    preloadImages(backgrounds);
+    preloadImages(backgroundsMobile);
+  }, [backgrounds, backgroundsMobile]);
+
+  useEffect(() => {
+    const imagesToUse = isMobile ? backgroundsMobile : backgrounds;
 
     const interval = setInterval(() => {
       setCurrentBackground((prevBackground) =>
-        prevBackground === imagesToPreload.length - 1 ? 0 : prevBackground + 1
+        prevBackground === imagesToUse.length - 1 ? 0 : prevBackground + 1
       );
     }, 4000); // Changez 4000 pour définir la durée entre les changements d'images (en millisecondes)
 
     return () => clearInterval(interval);
   }, [isMobile, backgrounds, backgroundsMobile]);
 
-  return isMobile ? (
+  const currentImages = isMobile ? backgroundsMobile : backgrounds;
+
+  return (
     <div
       className="header"
       style={{
-        backgroundImage: `url(${backgroundsMobile[currentBackground]})`,
+        backgroundImage: `url(${currentImages[currentBackground]})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundAttachment: "fixed",
-        transition: "background-image 1s ease-in-out",
-      }}
-    >
-      <Navbar scrollControlValue={700} />
-    </div>
-  ) : (
-    <div
-      className="header"
-      style={{
-        backgroundImage: `url(${backgrounds[currentBackground]})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-        transition: "background-image 1s ease-in-out",
+        // transition: "background-image 1s ease-in-out",
       }}
     >
       <Navbar scrollControlValue={700} />
