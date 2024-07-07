@@ -12,7 +12,6 @@ import background5 from "../assets/images/Home/home5.webp";
 // Import Mobile backgrounds
 import backgroundMobile1 from "../assets/images/Home/homeMobile1.webp";
 import backgroundMobile2 from "../assets/images/Home/homeMobile2.webp";
-import backgroundMobile3 from "../assets/images/Home/homeMobile3.webp";
 import backgroundMobile4 from "../assets/images/Home/homeMobile4.webp";
 import backgroundMobile5 from "../assets/images/Home/homeMobile5.webp";
 import backgroundMobile6 from "../assets/images/Home/homeMobile6.webp";
@@ -48,7 +47,6 @@ const Header = () => {
     () => [
       backgroundMobile1,
       backgroundMobile2,
-      backgroundMobile3,
       backgroundMobile4,
       backgroundMobile5,
       backgroundMobile6,
